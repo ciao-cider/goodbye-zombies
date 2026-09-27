@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/guns/Gun.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/shotgun.png" type="Texture2D" id=2]
+[ext_resource path="res://sounds/shotgun_fire.wav" type="AudioStream" id=3]
+[ext_resource path="res://scenes/guns/ShotgunPellet.tscn" type="PackedScene" id=4]
+
+[node name="Shotgun" instance=ExtResource( 1 )]
+Bullet = ExtResource( 4 )
+damage = 18
+fire_rate = 1.0
+accuracy = 10.0
+knockback = 500.0
+self_knockback = 350.0
+spread_pattern = [ -20, -12, -4, 4, 12, 20 ]
+penetration_power = 3
+
+[node name="GunSprite" parent="." index="0"]
+texture = ExtResource( 2 )
+
+[node name="MuzzlePosition" parent="GunSprite" index="0"]
+position = Vector2( 8, 0 )
+
+[node name="MuzzleFlash" parent="GunSprite/MuzzlePosition" index="0"]
+visible = false
+
+[node name="FireSound" parent="." index="3"]
+stream = ExtResource( 3 )

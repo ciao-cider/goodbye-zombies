@@ -1,0 +1,6 @@
+res://default_env.tres
+res://scenes/menu/MainMenu.tscn
+res://resources/ui/default_ui_theme.tres
+res://scenes/characters/Zombie.tscn
+res://scenes/maps/MainMap.tscn
+res://scenes/characters/Player.tscn
